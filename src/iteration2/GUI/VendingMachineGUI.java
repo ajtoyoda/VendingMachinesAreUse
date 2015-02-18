@@ -110,9 +110,7 @@ public class VendingMachineGUI{//implements IndicatorLightSimulatorListener {
 
 		// First pop button
 		// Pop_1 = new JButton(myMachine.getPopNameAt(0));
-		Pop_1 = new JButton(new ImageIcon(
-				getClass().getResource("/Icons/1.png"),
-				"Temporary Name"));
+		Pop_1 = new JButton(new ImageIcon("Resources/Icons/1.png"));
 		myFrame.getContentPane().add(
 				Pop_1,
 				getNewConstraints(1, 5, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
