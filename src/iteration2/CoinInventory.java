@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-
-import com.vendingmachinesareus.*;
 public class CoinInventory implements CoinReceptacleListener, CoinRackListener {
 	//This is the value in the receptacle
 	private int receptacleCoinValue;
@@ -13,12 +11,14 @@ public class CoinInventory implements CoinReceptacleListener, CoinRackListener {
 	private int [] coinRackValue;
 	//This stores the value of the coinRack and the index for the coinRackValue array associated with it
 	private Map <Integer, Integer> valueToRackMap;
+	private int [] coinValues;
 	
 	public CoinInventory(int [] coinValues){
 		receptacleCoinValue = 0;
 		coinRackValue = new int[coinValues.length];
 		valueToRackMap = new HashMap<Integer, Integer>();
 		ArrayList <Integer> sortedSet = new ArrayList <Integer>();
+		Collections.sort(sortedSet);
 		
 		//Sorts coin values so my array is sorted as well
 		for(int i = 0; i < coinValues.length; i++){
@@ -29,16 +29,16 @@ public class CoinInventory implements CoinReceptacleListener, CoinRackListener {
 		for(int coinValue: sortedSet){
 			valueToRackMap.put(coinValue, j++);
 		}
+		
+		this.coinValues = coinValues;
 	}
 	@Override
 	public void disabled(AbstractHardware<AbstractHardwareListener> arg0) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void enabled(AbstractHardware<AbstractHardwareListener> arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -93,6 +93,10 @@ public class CoinInventory implements CoinReceptacleListener, CoinRackListener {
 	public int getNumberOfCoinsInRack(int coinRackValueToReturn){
 		return coinRackValue[valueToRackMap.get(coinRackValueToReturn)];
 	}
-	public int4
-
+	public int getReceptacleAmount(){
+		return receptacleCoinValue;
+	}
+	public int[] getCoinValues(){
+		return coinValues;
+	}
 }
