@@ -18,6 +18,8 @@ import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.io.OutputStream;
 
+//Test change for commit
+
 public class VendingMachineGUI{//implements IndicatorLightSimulatorListener {
 
 	private JFrame myFrame;
