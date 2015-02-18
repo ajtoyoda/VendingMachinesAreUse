@@ -1,5 +1,6 @@
 package iteration2;
 
+import com.vendingmachinesareus.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
