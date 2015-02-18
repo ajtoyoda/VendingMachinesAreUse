@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-
-import com.vendingmachinesareus.*;
 public class CoinInventory implements CoinReceptacleListener, CoinRackListener {
 	//This is the value in the receptacle
 	private int receptacleCoinValue;

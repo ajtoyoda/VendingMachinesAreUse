@@ -3,8 +3,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
 
-import com.vendingmachinesareus.*;
-
 public class ChangeMaker {
 	static public boolean makeChange(int amountOfChange, int coinValues[], Map<Integer, CoinRack> coinRackMap){
 		//Sort coin values
