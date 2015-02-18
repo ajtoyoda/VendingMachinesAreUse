@@ -1,4 +1,4 @@
-package org.lsmr.vendingmachine.simulator.GUI;
+package ajtoyoda-VendingMachinesAreUse;
 
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
