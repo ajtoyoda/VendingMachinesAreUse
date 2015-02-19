@@ -2,6 +2,8 @@ package iteration2;
 
 import com.vendingmachinesareus.AbstractHardware;
 import com.vendingmachinesareus.AbstractHardwareListener;
+import com.vendingmachinesareus.CapacityExceededException;
+import com.vendingmachinesareus.DisabledException;
 import com.vendingmachinesareus.SelectionButton;
 import com.vendingmachinesareus.SelectionButtonListener;
 
@@ -41,11 +43,15 @@ public class PurchaseController implements SelectionButtonListener {
 			if (cardManager.hasCard()) {
 				// Display pay for remainder on card?
 				// Display please enter pin
-				String PIN;
+				String PIN = null;
 				if (cardManager.verify(PIN)) {
 					cost -= coinInventory.getReceptacleAmount();
 					if (cardManager.charge(cost, PIN)) {
-						coinLocationManager.getCoinReceptacle().storeCoins();
+						try {
+							coinLocationManager.getCoinReceptacle().storeCoins();
+						} catch (CapacityExceededException | DisabledException e) {
+							//Should disable machine
+						}
 						popInventory.dispense(arg0);
 					} else {
 						// Display cannot charge card
