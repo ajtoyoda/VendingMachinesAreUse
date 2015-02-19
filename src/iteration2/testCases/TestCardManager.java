@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import com.vendingmachinesareus.Card;
 import com.vendingmachinesareus.CardSlot;
+import com.vendingmachinesareus.EmptyException;
 
 public class TestCardManager {
 
@@ -24,11 +25,7 @@ public class TestCardManager {
 		
 	}
 	
-	@Test
-	public void testCardEjected()
-	{
-		
-	}
+	
 	
 	@Test
 	public void testcardInserted()
@@ -37,18 +34,96 @@ public class TestCardManager {
 		final Card card = mockingContext.mock(Card.class);
 		mockingContext.checking(new Expectations() {
 			{
-			one(card).readCardData();
-			will(returnValue(2));
-			}
+			one(card).getType();
+			will(returnValue(0));
+			one(card).getNumber();
+			will(returnValue("123456789"));
+			one(card).getName();
+			will(returnValue("John Smith"));
+			}}
+		);
 		final CardSlot cardSlot = mockingContext.mock(CardSlot.class);
-		mockingContext.checking(new Expectations() {
-			{
-			one(cardSlot).readCardData();
-			will(returnValue(2));
-			}
-			cardManager.cardInserted(arg0);
+		try {
+			mockingContext.checking(new Expectations() {
+				{
+				one(cardSlot).readCardData();
+				will(returnValue(card));
+				}}
+			);
+		} catch (EmptyException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			cardManager.cardInserted(cardSlot);
+			assertTrue(cardManager.hasCard());
 	}
 	
+	@Test
+	public void testCardEjected()
+	{
+		Mockery mockingContext = new Mockery();
+		final Card card = mockingContext.mock(Card.class);
+		mockingContext.checking(new Expectations() {
+			{
+			one(card).getType();
+			will(returnValue(0));
+			one(card).getNumber();
+			will(returnValue("123456789"));
+			one(card).getName();
+			will(returnValue("John Smith"));
+			}}
+		);
+		final CardSlot cardSlot = mockingContext.mock(CardSlot.class);
+		try {
+			mockingContext.checking(new Expectations() {
+				{
+				one(cardSlot).readCardData();
+				will(returnValue(card));
+				}}
+			);
+		} catch (EmptyException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			cardManager.cardInserted(cardSlot);
+			cardManager.cardEjected(cardSlot);
+			assertFalse(cardManager.hasCard());
+	}
+	
+	@Test
+	public void testHasCard()
+	{
+
+		Mockery mockingContext = new Mockery();
+		final Card card = mockingContext.mock(Card.class);
+		mockingContext.checking(new Expectations() {
+			{
+			one(card).getType();
+			will(returnValue(0));
+			one(card).getNumber();
+			will(returnValue("123456789"));
+			one(card).getName();
+			will(returnValue("John Smith"));
+			}}
+		);
+		final CardSlot cardSlot = mockingContext.mock(CardSlot.class);
+		try {
+			mockingContext.checking(new Expectations() {
+				{
+				one(cardSlot).readCardData();
+				will(returnValue(card));
+				}}
+			);
+		} catch (EmptyException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			assertFalse(cardManager.hasCard());
+			cardManager.cardInserted(cardSlot);
+			assertTrue(cardManager.hasCard());
+			cardManager.cardEjected(cardSlot);
+			assertFalse(cardManager.hasCard());
+	}
 	
 	private CardManager cardManager;
 }
