@@ -222,79 +222,79 @@ public class VendingMachineGUI{//implements IndicatorLightSimulatorListener {
 				getNewConstraints(3, 5, 1, 3, 1.0, 1.0, northeastInt,
 						fillNoneInt, tenInsets, 0, 0));
 		
-		JButton pin1 = new JButton("1");
+		JButton pin1 = new JButton(new ImageIcon("Resources/PinPad/1.jpg"));
 		myFrame.getContentPane().add(
 				pin1,
 				getNewConstraints(4, 5, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 		
-		JButton pin2 = new JButton("2");
+		JButton pin2 = new JButton(new ImageIcon("Resources/PinPad/2.jpg"));
 		myFrame.getContentPane().add(
 				pin2,
 				getNewConstraints(5, 5, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
-		JButton pin3 = new JButton("3");
+		JButton pin3 = new JButton(new ImageIcon("Resources/PinPad/3.jpg"));
 		myFrame.getContentPane().add(
 				pin3,
 				getNewConstraints(6, 5, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
-		JButton pin4 = new JButton("4");
+		JButton pin4 = new JButton(new ImageIcon("Resources/PinPad/4.jpg"));
 		myFrame.getContentPane().add(
 				pin4,
 				getNewConstraints(4, 6, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
-		JButton pin5 = new JButton("5");
+		JButton pin5 = new JButton(new ImageIcon("Resources/PinPad/5.jpg"));
 		myFrame.getContentPane().add(
 				pin5,
 				getNewConstraints(5, 6, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
-		JButton pin6 = new JButton("6");
+		JButton pin6 = new JButton(new ImageIcon("Resources/PinPad/6.jpg"));
 		myFrame.getContentPane().add(
 				pin6,
 				getNewConstraints(6, 6, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
-		JButton pin7 = new JButton("7");
+		JButton pin7 = new JButton(new ImageIcon("Resources/PinPad/7.jpg"));
 		myFrame.getContentPane().add(
 				pin7,
 				getNewConstraints(4, 7, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
-		JButton pin8 = new JButton("8");
+		JButton pin8 = new JButton(new ImageIcon("Resources/PinPad/8.jpg"));
 		myFrame.getContentPane().add(
 				pin8,
 				getNewConstraints(5, 7, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
-		JButton pin9 = new JButton("9");
+		JButton pin9 = new JButton(new ImageIcon("Resources/PinPad/9.jpg"));
 		myFrame.getContentPane().add(
 				pin9,
 				getNewConstraints(6, 7, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 		
-		JButton pin0 = new JButton("0");
+		JButton pin0 = new JButton(new ImageIcon("Resources/PinPad/0.jpg"));
 		myFrame.getContentPane().add(
 				pin0,
 				getNewConstraints(5, 8, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
-		JButton pinX = new JButton("X");
+		JButton pinX = new JButton(new ImageIcon("Resources/PinPad/X.jpg"));
 		myFrame.getContentPane().add(
 				pinX,
 				getNewConstraints(4, 9, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
-		JButton pinC = new JButton("C");
+		JButton pinC = new JButton(new ImageIcon("Resources/PinPad/C.jpg"));
 		myFrame.getContentPane().add(
 				pinC,
 				getNewConstraints(5, 9, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
-		JButton pinCheck = new JButton("✓");
+		JButton pinCheck = new JButton(new ImageIcon("Resources/PinPad/checkm.jpg"));
 		myFrame.getContentPane().add(
 				pinCheck,
 				getNewConstraints(6, 9, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
