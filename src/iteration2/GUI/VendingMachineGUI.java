@@ -146,70 +146,70 @@ public class VendingMachineGUI{//implements IndicatorLightSimulatorListener {
 						fillNoneInt, tenInsets, 0, 0));
 
 		// First pop button
-		Pop_1 = new JButton(new ImageIcon("Resources/Icons/1.png"));
+		Pop_1 = new JButton(new ImageIcon("Resources/Pops/1.png"));
 		myFrame.getContentPane().add(
 				Pop_1,
 				getNewConstraints(1, 5, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 		
 		// Second pop button
-		Pop_2 = new JButton(new ImageIcon("Resources/Icons/2.jpg"));
+		Pop_2 = new JButton(new ImageIcon("Resources/Pops/2.jpg"));
 		myFrame.getContentPane().add(
 				Pop_2,
 				getNewConstraints(2, 5, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
 		// Third pop button
-		Pop_3 = new JButton(new ImageIcon("Resources/Icons/3.jpg"));
+		Pop_3 = new JButton(new ImageIcon("Resources/Pops/3.jpg"));
 		myFrame.getContentPane().add(
 				Pop_3,
 				getNewConstraints(1, 6, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
 		// Fourth pop button
-		Pop_4 = new JButton(new ImageIcon("Resources/Icons/4.jpg"));
+		Pop_4 = new JButton(new ImageIcon("Resources/Pops/4.jpg"));
 		myFrame.getContentPane().add(
 				Pop_4,
 				getNewConstraints(2, 6, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
 		// Fifth pop button
-		Pop_5 = new JButton(new ImageIcon("Resources/Icons/5.png"));
+		Pop_5 = new JButton(new ImageIcon("Resources/Pops/5.png"));
 		myFrame.getContentPane().add(
 				Pop_5,
 				getNewConstraints(1, 7, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
 		// Sixth pop button
-		Pop_6 = new JButton(new ImageIcon("Resources/Icons/6.jpg"));
+		Pop_6 = new JButton(new ImageIcon("Resources/Pops/6.jpg"));
 		myFrame.getContentPane().add(
 				Pop_6,
 				getNewConstraints(2, 7, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
 		// Seventh pop button
-		Pop_7 = new JButton(new ImageIcon("Resources/Icons/7.jpg"));
+		Pop_7 = new JButton(new ImageIcon("Resources/Pops/7.jpg"));
 		myFrame.getContentPane().add(
 				Pop_7,
 				getNewConstraints(1, 8, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
 		// Eigth pop button
-		Pop_8 = new JButton(new ImageIcon("Resources/Icons/8.jpg"));
+		Pop_8 = new JButton(new ImageIcon("Resources/Pops/8.jpg"));
 		myFrame.getContentPane().add(
 				Pop_8,
 				getNewConstraints(2, 8, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
 		// Ninth pop button
-		Pop_9 = new JButton(new ImageIcon("Resources/Icons/9.png"));
+		Pop_9 = new JButton(new ImageIcon("Resources/Pops/9.png"));
 		myFrame.getContentPane().add(
 				Pop_9,
 				getNewConstraints(1, 9, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
 						zeroInsets, 0, 0));
 
 		// Tenth pop button
-		Pop_10 = new JButton(new ImageIcon("Resources/Icons/10.jpg"));
+		Pop_10 = new JButton(new ImageIcon("Resources/Pops/10.jpg"));
 		myFrame.getContentPane().add(
 				Pop_10,
 				getNewConstraints(2, 9, 1, 1, 1.0, 1.0, centerInt, fillBothInt,
